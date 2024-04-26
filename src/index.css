@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+input[type="email"],input[type="password"],input[type="text"],textarea{
+  @apply  border border-gray-300 w-80 my-1 p-2 outline-none text-sm bg-input font-normal text-black placeholder:text-gray-500;
+}
+
+
+input[type="email"],input[type="password"],input[type="text"],textarea{
+  @apply max-sm:w-60
+}
+
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 20px;
+  position: relative;
+  margin:auto;
+  aspect-ratio: 1;
+  display: grid;
+  border-radius: 50%;
+  background:
+    linear-gradient(0deg ,rgb(0 0 0/50%) 30%,#0000 0 70%,rgb(0 0 0/100%) 0) 50%/8% 100%,
+    linear-gradient(90deg,rgb(0 0 0/25%) 30%,#0000 0 70%,rgb(0 0 0/75% ) 0) 50%/100% 8%;
+  background-repeat: no-repeat;
+  animation: l23 1s infinite steps(12);
+}
+.loader::before,
+.loader::after {
+   content: "";
+   grid-area: 1/1;
+   border-radius: 50%;
+   background: inherit;
+   opacity: 0.915;
+   transform: rotate(30deg);
+}
+.loader::after {
+   opacity: 0.83;
+   transform: rotate(60deg);
+}
+@keyframes l23 {
+  100% {transform: rotate(1turn)}
+}
+
+.status{
+  height: 8vh;
+  width: 700px !important;
+
+}
+.img{
+  object-fit: cover !important;
+  height:600px !important;
+  width:500px !important;
+  aspect-ratio: 0.2;
+}
+
+.break_width{
+  width: 500px !important;
+  /* margin: 0px 10px; */
+  padding: 0 10px;
+}
+.comment_box{
+  border: none;
+  background-color: white !important;
+  width: 500px !important;
+  height:20px;
+  font-size: 16px;
+  margin-top: 10px;
+  outline: none;
+}
+
+
+
+  .gradient {
+    background: #833ab4;
+    background: linear-gradient(
+      to right,
+      #833ab4,#fd1d1d,#fcb045
+    );
+  }
