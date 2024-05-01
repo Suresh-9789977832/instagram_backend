@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Profile_suggestpage from './Profile_suggestpage'
+import Profile_suggestpage from './Profile_suggestpage';
 
 function Explore() {
 

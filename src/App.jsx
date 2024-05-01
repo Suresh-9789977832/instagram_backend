@@ -2,7 +2,7 @@ import {Link, Route, Routes } from 'react-router-dom'
 import Indexpage from './Pages/Indexpage'
 import Loginpage from './Pages/Loginpage'
 import Signup from './Pages/Signup'
-import { Toaster } from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast'
 import Profilepage from './Pages/Profilepage'
 import { Usercontext } from './Components/Context'
 import Createpages from './Pages/Createposts'

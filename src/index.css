@@ -58,7 +58,7 @@ input[type="email"],input[type="password"],input[type="text"],textarea{
 
 .break_width{
   width: 500px !important;
-  padding: 0 10px;
+  padding: 0 10px
 }
 .comment_box{
   border: none;

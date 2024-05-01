@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 import axios from 'axios'
 import env from '../env'
 import { Usercontext } from '../Components/Context'
-import toast from 'react-hot-toast'
+import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom'
 import Loader from '../Loader'
 import { useEffect } from 'react'
@@ -104,7 +104,7 @@ function Createposts() {
             {
               posts.length === 0 ? <img />
                 :
-                <img  src={'https://instagram-g348.onrender.com/' +posts[0]} className=' w-54  h-56 px-5 object-cover' />
+                <img  src={'https://instagram-wkf6.onrender.com/' +posts[0]} className=' w-54  h-56 px-5 object-cover' />
             }
                
             {

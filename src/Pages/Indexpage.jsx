@@ -10,21 +10,6 @@ function Indexpage() {
 
 
 
-//   useEffect(() => {
-//     const followedusersposts = async (req,res) => {
-//     try {
-//       let res = await axios.put(`${env.BASE_URL}/user/populatefollwersposts`, {followedusers})
-//       console.log(res)
-//       res.json(res.data)
-//     } catch (error) {
-//       console.log(error)    
-//     }
-//     }
-//     followedusersposts()
-// },[])
-
-
-
 
   
 

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import env from '../env'
-import toast from 'react-hot-toast';
+import toast from 'react-hot-toast'
 import Loader from '../Loader'
 
 import { Link,useNavigate } from 'react-router-dom'

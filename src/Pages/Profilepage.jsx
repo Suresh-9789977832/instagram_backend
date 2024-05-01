@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import Navbar from './Navbar'
-import { Usercontext } from '../Components/Context'
+import { Usercontext } from '../Components/Context';
 import axios from 'axios';
 import env from '../env'
 import { Form, useParams } from 'react-router-dom'
@@ -90,12 +90,12 @@ console.log()
                                 <label>
                                     <input type='file' className='hidden' multiple onChange={imageupload} />
 
-                                    {Object.keys(check).length === 0 && check.constructor === Object ? <img src={'https://instagram-g348.onrender.com/' + userpost?.profilepicurl} className=' rounded-full  w-48 h-48 max-3sm:w-28 max-3sm:h-28 object-cover' />:
-                                <img src= { 'https://instagram-g348.onrender.com/'+ check?.profilepicurl} className=' rounded-full  w-48 h-48 max-3sm:w-28 max-3sm:h-28 object-cover'/>}
+                                    {Object.keys(check).length === 0 && check.constructor === Object ? <img src={'https://instagram-wkf6.onrender.com/' + userpost?.profilepicurl} className=' rounded-full  w-48 h-48 max-3sm:w-28 max-3sm:h-28 object-cover' />:
+                                <img src= { 'https://instagram-wkf6.onrender.com/'+ check?.profilepicurl} className=' rounded-full  w-48 h-48 max-3sm:w-28 max-3sm:h-28 object-cover'/>}
                                 </label>
                                 :
                                 <lable>
-                              <img src={'https://instagram-g348.onrender.com/'+userpost?.profilepicurl } className=' rounded-full  w-48 h-48 max-3sm:w-28 max-3sm:h-28 object-cover'/>
+                              <img src={'https://instagram-wkf6.onrender.com/'+userpost?.profilepicurl } className=' rounded-full  w-48 h-48 max-3sm:w-28 max-3sm:h-28 object-cover'/>
                                 </lable>
                         }
               </div>
@@ -151,7 +151,7 @@ console.log()
               </div>
                   <div className='grid grid-cols-3 gap-4'>
                         {userpost?.posts?.map((e, i) => (
-                            <img key={i} src={'https://instagram-g348.onrender.com/' + e.posts} className='w-96 h-80 object-cover max-3sm:w-60  max-3sm:h-48' />
+                            <img key={i} src={'https://instagram-wkf6.onrender.com/' + e.posts} className='w-96 h-80 object-cover max-3sm:w-60  max-3sm:h-48' />
                       ))}
               </div>
               </div>

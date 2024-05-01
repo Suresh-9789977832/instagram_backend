@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import Posts from './Posts'
 import Profile_suggestpage from './Profile_suggestpage'
 import axios from 'axios'
-import env from '../env';
+import env from '../env'
 import { Usercontext } from '../Components/Context'
 
 function Posts_statuspage() {

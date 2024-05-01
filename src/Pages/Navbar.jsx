@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom';
 import { CiLogout } from "react-icons/ci";
-import { Usercontext } from '../Components/Context';
+import { Usercontext } from '../Components/Context'
 
 
 
@@ -83,7 +83,7 @@ import { Usercontext } from '../Components/Context';
                 
 
                 <Link Link to={`/profile/${token}/${id}`} className='flex items-center gap-4 cursor-pointer hover:bg-gray-100 w-72 h-12 rounded-md pl-3 group max-3xl:w-56 max-3lg:hover:w-12'>
-                        <span className='transform group-hover:scale-110 transition duration-70 ease-out'><img src={'https://instagram-g348.onrender.com/' + user.profilepicurl} className=' rounded-full  w-6 h-6 object-cover' /></span>
+                        <span className='transform group-hover:scale-110 transition duration-70 ease-out'><img src={'https://instagram-wkf6.onrender.com/' + user.profilepicurl} className=' rounded-full  w-6 h-6 object-cover' /></span>
 
                 <span className='max-3lg:hidden'>Profile</span>
                     </Link>

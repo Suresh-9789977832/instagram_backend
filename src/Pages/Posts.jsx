@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BsThreeDots } from "react-icons/bs";
-import Skeleton from '../Components/Skeleton';
+import Skeleton from '../Components/Skeleton'
 import Loading from './Loading';
 
 
@@ -48,7 +48,7 @@ function Posts({users,loading}) {
                         <div className='mx-24 mt-5  max-3sm:mx-0' key={i}>
                         <div className="flex justify-between">
                             <div className='flex flex-row justify-center items-center cursor-pointer mx-1 max-sm:px-2'>
-                                <img src={'https://instagram-g348.onrender.com/'+e?.profile} className=' mr-2 w-10 h-10 object-cover  border-2  border-red-600 rounded-full' />
+                                <img src={'https://instagram-wkf6.onrender.com/'+e?.profile} className=' mr-2 w-10 h-10 object-cover  border-2  border-red-600 rounded-full' />
                                     <h3 className='mr-1 font-semibold'>{e.username}</h3>
                                 <span className='flex flex-row justify-center items-center font-bold mr-1 text-gray-500'>.</span>
                                 <span className='flex flex-row justify-center items-center mr-1 text-gray-500'>4 d</span>
@@ -56,7 +56,7 @@ function Posts({users,loading}) {
                             <div className='flex items-center  cursor-pointer mx-2'><BsThreeDots/></div>
                         </div>
                         <div className="mt-3 ">
-                            <img src={'https://instagram-g348.onrender.com/'+e.posts} className='img'/>
+                            <img src={'https://instagram-wkf6.onrender.com/'+e.posts} className='img'/>
                         </div>
                         <div className=' flex justify-between mt-3 mb-2  max-sm:px-2'>
                             <div className='flex gap-4'>
