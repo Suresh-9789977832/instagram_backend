@@ -58,7 +58,6 @@ input[type="email"],input[type="password"],input[type="text"],textarea{
 
 .break_width{
   width: 500px !important;
-  /* margin: 0px 10px; */
   padding: 0 10px;
 }
 .comment_box{

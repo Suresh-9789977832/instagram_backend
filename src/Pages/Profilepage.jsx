@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import Navbar from './Navbar'
 import { Usercontext } from '../Components/Context'
-import axios from 'axios'
+import axios from 'axios';
 import env from '../env'
 import { Form, useParams } from 'react-router-dom'
 

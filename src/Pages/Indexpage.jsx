@@ -8,13 +8,6 @@ function Indexpage() {
 
 
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     const newarray = followedusers.map(e => e.posts)
-  //     console.log(newarray)  
-  //   }, 1000);
-  //   },[followedusers])
-
 
 
 //   useEffect(() => {

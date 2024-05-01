@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import { CiLogout } from "react-icons/ci";
 import { Usercontext } from '../Components/Context';
 

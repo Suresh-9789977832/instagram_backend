@@ -4,7 +4,6 @@ import { Usercontext } from '../Components/Context'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import env from '../env'
-import Loader from '../Loader'
 import Button from './Button'
 
 

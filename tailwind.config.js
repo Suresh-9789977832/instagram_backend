@@ -18,7 +18,7 @@ export default {
         '3md': "769px",
         '3sm': "426px",
         "3ssm": "376px",
-        "3sssm":"321px"
+        "3sssm":"321px",
       },
     }
   },
