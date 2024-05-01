@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import Navbar from './Navbar'
+import Navbar from './Navbar';
 import Posts_statuspage from './Posts_statuspage'
 
 

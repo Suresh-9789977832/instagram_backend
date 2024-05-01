@@ -5,7 +5,7 @@ import Loader from '../Loader'
 
 import { Link,useNavigate } from 'react-router-dom'
 import axios from 'axios'
-import { Usercontext } from '../Components/Context'
+import { Usercontext } from '../Components/Context';
 
 
 function Loginpage() {

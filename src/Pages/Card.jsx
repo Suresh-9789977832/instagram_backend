@@ -2,7 +2,6 @@ import React from 'react'
 import { useContext, useEffect, useState } from 'react'
 import { Usercontext } from '../Components/Context'
 import { Link } from 'react-router-dom'
-import axios from 'axios'
 import Button from './Button'
 
 

@@ -34,17 +34,7 @@ function Profile_suggestpage({show}) {
   }, [users])
   
 
-  // useEffect(() => {
-  //   const getdata =async () => {
-  //       try {
-  //         let res = await axios.get(`${env.BASE_URL}/user/${userdata._id || userdata.id }`)
-  //        setprofile(res.data.data)
-  //       } catch (error) {
-  //           console.log(error)
-  //       }
-  //   }
-  //   getdata()
-  // }, [])
+  
 
 
   return (

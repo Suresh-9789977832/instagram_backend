@@ -20,7 +20,7 @@ export default {
         "3ssm": "376px",
         "3sssm":"321px",
       },
-    },
+    }
   },
   plugins: [require("daisyui")],
 }

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BsThreeDots } from "react-icons/bs";
-import Skeleton from '../Components/Skeleton'
+import Skeleton from '../Components/Skeleton';
 import Loading from './Loading';
 
 

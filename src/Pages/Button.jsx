@@ -9,7 +9,6 @@ function Button({ id, final }) {
 
   const { userdata, user,setuser} = useContext(Usercontext)
   let token = sessionStorage.getItem('token')
-  const [lastvalue,setlastvalue]=useState('')
   const [followloader, setfollowloader] = useState(false)
   const [unloader, setunloader] = useState(false) 
 

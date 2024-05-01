@@ -5,7 +5,7 @@ import { Usercontext } from '../Components/Context'
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom'
 import Loader from '../Loader'
-import { useEffect } from 'react'
+import { useEffect } from 'react';
 
 
 function Createposts() {

@@ -3,7 +3,7 @@ import Navbar from './Navbar'
 import { Usercontext } from '../Components/Context';
 import axios from 'axios';
 import env from '../env'
-import { Form, useParams } from 'react-router-dom'
+import { Form, useParams } from 'react-router-dom';
 
 function Profilepage() {
 

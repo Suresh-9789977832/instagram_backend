@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Usercontext } from '../Components/Context'
+import { Usercontext } from '../Components/Context';
 
 function Loading() {
     let {userdata}=useContext(Usercontext)
