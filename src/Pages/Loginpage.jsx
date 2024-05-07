@@ -75,6 +75,10 @@ function Loginpage() {
                     <p className="relative bottom-3 px-4  text-gray-500 text-sm font-semibold">OR</p>
                     <div className='h-px w-32 bg-line max-sm:w-20'></div>
                 </div>
+                <div className='flex flex-col justify-center border mx-10 bg-slate-200 p-2'>
+                    <h2>Demo Username-Suresh@gmail.com</h2>
+                    <h2>Demo password-Suresh</h2>
+                    </div>
                 <a href='https://www.facebook.com/' target='_blank' className="flex justify-center items-center mt-4">
                 <span>
                     <img src="./images/fb.png" className="w-4 mr-2"/>
