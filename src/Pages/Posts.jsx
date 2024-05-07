@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { BsThreeDots } from "react-icons/bs";
 import Skeleton from '../Components/Skeleton';
 import Loading from './Loading';
+import { Link } from 'react-router-dom';
+import { Usercontext } from '../Components/Context';
 
 
 
@@ -9,7 +11,11 @@ import Loading from './Loading';
 function Posts({users,loading}) {
 
     const [finaldata, setfinaldata] = useState()
-    
+    const { logout, user,userdata } = useContext(Usercontext)
+
+    const userid = userdata.id || userdata._id
+    let token = sessionStorage.getItem('token')
+
 
   useEffect(() => {
       let joinallarray = [].concat(...users)
@@ -17,7 +23,7 @@ function Posts({users,loading}) {
    setfinaldata(joinallarray)
   }, [users])
   
-
+console.log(finaldata)
     
     
     
@@ -32,11 +38,12 @@ function Posts({users,loading}) {
         }
             
        
-                <div>
+        <div>
+            
 
                 {
                     finaldata?.map((e, i) => (
-                        <div className='mx-24 mt-5  max-3sm:mx-0' key={i}>
+                        <Link to={`/profile/${token}/${e?.owner}`} className='mx-24 mt-5  max-3sm:mx-0' key={i}>
                         <div className="flex justify-between">
                             <div className='flex flex-row justify-center items-center cursor-pointer mx-1 max-sm:px-2'>
                                 <img src={'https://instagram-wkf6.onrender.com/'+e?.profile} className=' mr-2 w-10 h-10 object-cover  border-2  border-red-600 rounded-full' />
@@ -77,7 +84,7 @@ function Posts({users,loading}) {
                             <input placeholder='Add a comment...' className='comment_box mb-5 placeholder:text-gray-500 max-sm:px-2' />
                             <hr/>
                         </div>
-                    </div>
+                    </Link>
                     ))
                 }
              

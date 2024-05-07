@@ -106,6 +106,14 @@ input[type="email"],input[type="password"],input[type="text"],textarea{
     aspect-ratio: 0.2;
   }
 }
+@media screen and  (max-width:300px) {
+  .img{
+    object-fit: contain !important;
+    height:220px !important;
+    width:280px !important;
+    aspect-ratio: 0.2;
+  }
+}
 
 
   .gradient {
