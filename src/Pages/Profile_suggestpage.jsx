@@ -58,7 +58,7 @@ function Profile_suggestpage({show}) {
    
     
       <div className='mt-5'>
-        <div className='flex justify-between mb-5'>
+        <div className='flex justify-between mb-5 mx-10'>
           <p className='font-semibold text-gray-500'>Suggested for you</p>
           <p>See All</p>
         </div>

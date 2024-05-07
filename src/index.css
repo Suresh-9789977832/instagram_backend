@@ -70,6 +70,42 @@ input[type="email"],input[type="password"],input[type="text"],textarea{
   outline: none;
 }
 
+@media screen and  (max-width:426px) {
+  .img{
+    object-fit: cover !important;
+    height:400px !important;
+    width:400px !important;
+    margin: 10px;
+    aspect-ratio: 0.2;
+  }
+}
+
+@media screen and  (max-width:426px) {
+  .img{
+    object-fit: contain !important;
+    height:300px !important;
+    width:400px !important;
+    aspect-ratio: 0.2;
+  }
+}
+
+@media screen and  (max-width:376px) {
+  .img{
+    object-fit: contain !important;
+    height:250px !important;
+    width:350px !important;
+    aspect-ratio: 0.2;
+  }
+}
+
+@media screen and  (max-width:320px) {
+  .img{
+    object-fit: contain !important;
+    height:220px !important;
+    width:300px !important;
+    aspect-ratio: 0.2;
+  }
+}
 
 
   .gradient {

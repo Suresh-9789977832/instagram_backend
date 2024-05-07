@@ -74,7 +74,7 @@ console.log()
     return (
         
         
-      <div className="grid grid-cols-[1fr_7fr] max-3lg:grid-cols-[1fr_10fr] max-3xl:grid-cols-[1fr_5fr] max-3sm:grid-cols-[7fr]">
+      <div className="grid grid-cols-[1fr_7fr] max-3lg:grid-cols-[1fr_10fr] max-3xl:grid-cols-[1fr_5fr] max-3sm:grid-cols-[7fr] overflow-y-visible">
           <div className='border max-3sm:hidden'>
           <Navbar />
           </div>

@@ -20,7 +20,7 @@ function Card({final}) {
       {
           final.map((e, i) => (
             <div  className='flex gap-3 flex-col cursor-pointer py-1'  key={i}>
-            <div className='flex justify-between items-center'>
+            <div className='flex justify-between items-center max-3sssm:mx-8'>
             <Link to={`/profile/${token}/${e._id}`} className='flex justify-between items-center'>
             <div className='flex flex-col items-center cursor-pointer pr-3'>
                   <img src={'https://instagram-wkf6.onrender.com/'+e.profilepicurl} className=' rounded-full  w-16 h-16 object-cover p-1 border' />

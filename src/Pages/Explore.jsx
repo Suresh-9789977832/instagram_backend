@@ -5,7 +5,7 @@ function Explore() {
 
 
     return <>
-        <div className='flex justify-center items-center overflow-x-hidden overflow-x-auto h-full flex-col max-3sm:mr-10 max-3ssm:mr-4 max-3sssm:w-96 pr-10'>
+        <div className='flex justify-center items-center h-full flex-col max-3ssm:mr-4 pr-10 overflow-y-scroll'>
             <Profile_suggestpage show={true} />
         </div>
     </>
