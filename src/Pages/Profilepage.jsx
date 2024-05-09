@@ -4,15 +4,19 @@ import { Usercontext } from '../Components/Context';
 import axios from 'axios';
 import env from '../env'
 import { Form, useParams } from 'react-router-dom';
+import { imgDB } from '../Firebase/Firebase';
+import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
+import { v4 } from 'uuid';
 
 function Profilepage() {
 
     const { userdata, logout,user } = useContext(Usercontext)
-    const [userpost, setuserpost] = useState([])
+    const [userpost, setuserpost] = useState("")
     const params = useParams()
     const [accountuser,setaccountuser]=useState({})
     const token = sessionStorage.getItem("token")
-    const [check,setcheck]=useState({})
+    const [check, setcheck] = useState({})
+    const [final,setfinal]=useState('')
 
     useEffect(() => {
       
@@ -58,12 +62,15 @@ function Profilepage() {
 console.log()
 
     const imageupload = async(e) => {
-       try {
-           const file = e.target.files[0]
-           const data = new FormData()
-           data.append("file", file)
-           let res = await axios.post(`${env.BASE_URL}/user/singleupload/${token}`, data, { headers: { "Content-Type": "multipart/form-data" } })
-           setcheck(res.data.newuser)
+        try {
+            const imgs = ref(imgDB, `Imgs/${v4()}`)
+      uploadBytes(imgs, e.target.files[0]).then(data => {
+         getDownloadURL(data.ref).then(val => {
+             setfinal(val)
+        })
+      })
+        let res = await axios.post(`${env.BASE_URL}/user/singleupload/${token}`,{final})
+        setcheck(res.data.newuser)
        } catch (error) {
         if (error?.response?.status == 500) {
             console.log(error)
@@ -72,8 +79,6 @@ console.log()
     }
 
     return (
-        
-        
       <div className="grid grid-cols-[1fr_7fr] max-3lg:grid-cols-[1fr_10fr] max-3xl:grid-cols-[1fr_5fr] max-3sm:grid-cols-[7fr] overflow-y-visible">
           <div className='border max-3sm:hidden'>
           <Navbar />
@@ -90,12 +95,12 @@ console.log()
                                 <label>
                                     <input type='file' className='hidden' multiple onChange={imageupload} />
 
-                                    {Object.keys(check).length === 0 && check.constructor === Object ? <img src={'https://instagram-wkf6.onrender.com/' + userpost?.profilepicurl} className=' rounded-full  w-48 h-48 max-3sm:w-28 max-3sm:h-28 object-cover' />:
-                                <img src= { 'https://instagram-wkf6.onrender.com/'+ check?.profilepicurl} className=' rounded-full  w-48 h-48 max-3sm:w-28 max-3sm:h-28 object-cover'/>}
+                                    {Object.keys(check).length === 0 && check.constructor === Object ? <img src={ userpost?.profilepicurl} className=' rounded-full  w-48 h-48 max-3sm:w-28 max-3sm:h-28 object-cover' />:
+                                <img src= {check?.profilepicurl} className=' rounded-full  w-48 h-48 max-3sm:w-28 max-3sm:h-28 object-cover'/>}
                                 </label>
                                 :
                                 <lable>
-                              <img src={'https://instagram-wkf6.onrender.com/'+userpost?.profilepicurl } className=' rounded-full  w-48 h-48 max-3sm:w-28 max-3sm:h-28 object-cover'/>
+                              <img src={userpost?.profilepicurl } className=' rounded-full  w-48 h-48 max-3sm:w-28 max-3sm:h-28 object-cover'/>
                                 </lable>
                         }
               </div>
@@ -151,7 +156,7 @@ console.log()
               </div>
                   <div className='grid grid-cols-3 gap-4'>
                         {userpost?.posts?.map((e, i) => (
-                            <img key={i} src={'https://instagram-wkf6.onrender.com/' + e.posts} className='w-96 h-80 object-cover max-3sm:w-60  max-3sm:h-48' />
+                            <img key={i} src={e.posts} className='w-96 h-80 object-cover max-3sm:w-60  max-3sm:h-48' />
                       ))}
               </div>
               </div>

@@ -23,7 +23,7 @@ function Card({final}) {
             <div className='flex justify-between items-center max-3sssm:mx-8'>
             <Link to={`/profile/${token}/${e._id}`} className='flex justify-between items-center'>
             <div className='flex flex-col items-center cursor-pointer pr-3'>
-                  <img src={'https://instagram-wkf6.onrender.com/'+e.profilepicurl} className=' rounded-full  w-16 h-16 object-cover p-1 border' />
+                  <img src={e.profilepicurl} className=' rounded-full  w-16 h-16 object-cover p-1 border' />
               </div>
               <div>
                   <p className=' font-semibold'>{e.username}</p>

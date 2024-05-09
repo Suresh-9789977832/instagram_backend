@@ -43,7 +43,7 @@ function Profile_suggestpage({show}) {
         !show?   <Link to={`/profile/${token}/${userid}`} className='flex justify-between items-center  cursor-pointer'>
         <div className='flex justify-between items-center'>
         <div className='flex flex-col items-center  pr-3'>
-              <img src={'https://instagram-wkf6.onrender.com/' + user?.profilepicurl} className=' rounded-full  w-16 h-16 object-cover p-1 border-' />     
+              <img src={user?.profilepicurl} className=' rounded-full  w-16 h-16 object-cover p-1 border-' />     
           </div>
           <div>
             <p className=' font-semibold'>{userdata?.username}</p>

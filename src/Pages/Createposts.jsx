@@ -6,13 +6,16 @@ import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom'
 import Loader from '../Loader'
 import { useEffect } from 'react';
+import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
+import { imgDB } from '../Firebase/Firebase';
+import { v4 } from 'uuid';
 
 
 function Createposts() {
 
   
   const [desc, setdesc] = useState('')
-  const [posts, setposts] = useState([])
+  const [posts, setposts] = useState('')
   const [loader, setloader] = useState(false)
   const [field,setfield]=useState(false)
 
@@ -34,11 +37,9 @@ function Createposts() {
 
   const handlepost = async () => {
     const id = sessionStorage.getItem("token")
-
     try {
       setloader(true)
-      const final=posts.toString()
-      const res = await axios.post(`${env.BASE_URL}/post/createpost/${id}`, { posts:final, desc })
+      const res = await axios.post(`${env.BASE_URL}/post/createpost/${id}`, { posts:posts, desc })
       if (res.status === 201) {
         setloader(false)
         toast.success(res.data.message)
@@ -57,23 +58,15 @@ function Createposts() {
   
   const imageupload = async (e) => {
     try {
-     
-      const files = e.target.files
-      console.log(files)
-        const data = new FormData();
-        for (let i = 0; i < files.length; i++){
-            data.append("photos", files[i])
-        }
-      let res = await axios.post(`${env.BASE_URL}/post/upload`, data, {
-        headers:{"Content-Type":"multipart/form-data"}
+      const imgs = ref(imgDB, `Imgs/${v4()}`)
+      uploadBytes(imgs, e.target.files[0]).then(data => {
+        getDownloadURL(data.ref).then(val => {
+         setposts(val)
+        })
       })
-      setposts(res.data)
-      
     } catch (error) {
       console.log(error)
-    }
-   
-  }
+    }}
     
 
 
@@ -104,7 +97,7 @@ function Createposts() {
             {
               posts.length === 0 ? <img />
                 :
-                <img  src={'https://instagram-wkf6.onrender.com/' +posts[0]} className=' w-54  h-56 px-5 object-cover' />
+                <img  src={posts} className=' w-54  h-56 px-5 object-cover' />
             }
                
             {
