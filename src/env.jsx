@@ -1,4 +1,4 @@
 const env = {
-    BASE_URL: "http://localhost:3000"
+    BASE_URL: "https://instagram-wkf6.onrender.com"
 }
 export default env
